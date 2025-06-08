@@ -55,30 +55,6 @@
             margin-bottom: 4px;
         }
         
-        .home-row-mod {
-            background-color: #fff9e6;
-            border-color: #d4a017;
-            position: relative;
-            padding: 5px;
-            height: 50px;
-        }
-        
-        .home-row-mod .key-main {
-            font-size: 16px;
-            font-weight: 700;
-            color: #333;
-        }
-        
-        .home-row-mod .key-hold {
-            font-size: 9px;
-            color: #856404;
-            position: absolute;
-            bottom: 3px;
-            left: 0;
-            right: 0;
-            text-align: center;
-        }
-        
         .key {
             width: 60px;
             height: 50px;
@@ -92,6 +68,30 @@
             font-weight: 600;
             transition: all 0.2s;
             cursor: default;
+            position: relative;
+            flex-direction: column;
+            padding: 8px 4px;
+            box-sizing: border-box;
+        }
+        
+        .home-row-mod {
+            background-color: #fff9e6;
+            border-color: #d4a017;
+        }
+        
+        .home-row-mod .key-main {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            line-height: 1;
+            margin-bottom: 2px;
+        }
+        
+        .home-row-mod .key-hold {
+            font-size: 9px;
+            color: #856404;
+            line-height: 1;
+            font-weight: 500;
         }
         
         .key:hover {
@@ -202,20 +202,20 @@
                     </div>
                     <div class="key-row">
                         <div class="key home-row-mod">
-                            <div class="key-main">A</div>
-                            <div class="key-hold">SHIFT</div>
+                            <span class="key-main">A</span>
+                            <span class="key-hold">SHIFT</span>
                         </div>
                         <div class="key home-row-mod">
-                            <div class="key-main">S</div>
-                            <div class="key-hold">ALT</div>
+                            <span class="key-main">S</span>
+                            <span class="key-hold">ALT</span>
                         </div>
                         <div class="key home-row-mod">
-                            <div class="key-main">D</div>
-                            <div class="key-hold">CTRL</div>
+                            <span class="key-main">D</span>
+                            <span class="key-hold">CTRL</span>
                         </div>
                         <div class="key home-row-mod">
-                            <div class="key-main">F</div>
-                            <div class="key-hold">WIN</div>
+                            <span class="key-main">F</span>
+                            <span class="key-hold">WIN</span>
                         </div>
                         <div class="key">G</div>
                     </div>
@@ -246,20 +246,20 @@
                     <div class="key-row">
                         <div class="key">H</div>
                         <div class="key home-row-mod">
-                            <div class="key-main">J</div>
-                            <div class="key-hold">WIN</div>
+                            <span class="key-main">J</span>
+                            <span class="key-hold">WIN</span>
                         </div>
                         <div class="key home-row-mod">
-                            <div class="key-main">K</div>
-                            <div class="key-hold">CTRL</div>
+                            <span class="key-main">K</span>
+                            <span class="key-hold">CTRL</span>
                         </div>
                         <div class="key home-row-mod">
-                            <div class="key-main">L</div>
-                            <div class="key-hold">ALT</div>
+                            <span class="key-main">L</span>
+                            <span class="key-hold">ALT</span>
                         </div>
                         <div class="key home-row-mod">
-                            <div class="key-main">'</div>
-                            <div class="key-hold">SHIFT</div>
+                            <span class="key-main">'</span>
+                            <span class="key-hold">SHIFT</span>
                         </div>
                     </div>
                     <div class="key-row">
