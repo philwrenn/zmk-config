@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34-Key Keyboard Layers</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        h1, h2 {
+            color: #2c3e50;
+        }
+        
+        .layer-section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .keyboard-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 20px 0;
+        }
+        
+        .hand-section {
+            text-align: center;
+        }
+        
+        .hand-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        .keyboard-grid {
+            display: inline-block;
+            gap: 4px;
+        }
+        
+        .key-row {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 4px;
+        }
+        
+        .key {
+            width: 60px;
+            height: 50px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f8f8;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+            cursor: default;
+        }
+        
+        .key:hover {
+            background-color: #e8e8e8;
+            transform: translateY(-1px);
+        }
+        
+        .thumb-keys {
+            display: flex;
+            gap: 4px;
+            margin-top: 10px;
+            justify-content: center;
+        }
+        
+        .thumb-key {
+            width: 80px;
+            background-color: #e8f4fd;
+            border-color: #4a90e2;
+        }
+        
+        .held-key {
+            background-color: #4a90e2;
+            color: white;
+            border-color: #357abd;
+        }
+        
+        .empty-key {
+            background-color: #f0f0f0;
+            border-color: #ddd;
+            color: #999;
+        }
+        
+        .number-key {
+            background-color: #fff3cd;
+            border-color: #856404;
+            color: #856404;
+        }
+        
+        .nav-key {
+            background-color: #d1ecf1;
+            border-color: #0c5460;
+            color: #0c5460;
+        }
+        
+        .symbol-key {
+            background-color: #d4edda;
+            border-color: #155724;
+            color: #155724;
+        }
+        
+        .system-key {
+            background-color: #f8d7da;
+            border-color: #721c24;
+            color: #721c24;
+        }
+        
+        .activation-note {
+            background-color: #e8f4fd;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .legend {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+        }
+        
+        .legend-item {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .legend-color {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            vertical-align: middle;
+            margin-right: 8px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>34-Key Keyboard Layer Guide</h1>
+    
+    <!-- Default Layer -->
+    <div class="layer-section">
+        <h2>Default Layer (No keys held)</h2>
+        <p>This is your normal typing layer:</p>
+        
+        <div class="keyboard-container">
+            <div class="hand-section">
+                <div class="hand-label">Left Hand</div>
+                <div class="keyboard-grid">
+                    <div class="key-row">
+                        <div class="key">Q</div>
+                        <div class="key">W</div>
+                        <div class="key">E</div>
+                        <div class="key">R</div>
+                        <div class="key">T</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key">A</div>
+                        <div class="key">S</div>
+                        <div class="key">D</div>
+                        <div class="key">F</div>
+                        <div class="key">G</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key">Z</div>
+                        <div class="key">X</div>
+                        <div class="key">C</div>
+                        <div class="key">V</div>
+                        <div class="key">B</div>
+                    </div>
+                    <div class="thumb-keys">
+                        <div class="key thumb-key">TAB</div>
+                        <div class="key thumb-key">BKSP</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hand-section">
+                <div class="hand-label">Right Hand</div>
+                <div class="keyboard-grid">
+                    <div class="key-row">
+                        <div class="key">Y</div>
+                        <div class="key">U</div>
+                        <div class="key">I</div>
+                        <div class="key">O</div>
+                        <div class="key">P</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key">H</div>
+                        <div class="key">J</div>
+                        <div class="key">K</div>
+                        <div class="key">L</div>
+                        <div class="key">'</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key">N</div>
+                        <div class="key">M</div>
+                        <div class="key">,</div>
+                        <div class="key">.</div>
+                        <div class="key">/</div>
+                    </div>
+                    <div class="thumb-keys">
+                        <div class="key thumb-key">SPACE</div>
+                        <div class="key thumb-key">ENTER</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Layer 1 -->
+    <div class="layer-section">
+        <h2>Layer 1 - Numbers & Navigation (Hold Backspace)</h2>
+        <div class="activation-note">Activation: Hold down the right thumb Backspace key</div>
+        
+        <div class="keyboard-container">
+            <div class="hand-section">
+                <div class="hand-label">Left Hand</div>
+                <div class="keyboard-grid">
+                    <div class="key-row">
+                        <div class="key nav-key">INS</div>
+                        <div class="key number-key">1</div>
+                        <div class="key number-key">2</div>
+                        <div class="key number-key">3</div>
+                        <div class="key empty-key">-</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key nav-key">DEL</div>
+                        <div class="key number-key">4</div>
+                        <div class="key number-key">5</div>
+                        <div class="key number-key">6</div>
+                        <div class="key empty-key">-</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key nav-key">CAPS</div>
+                        <div class="key number-key">7</div>
+                        <div class="key number-key">8</div>
+                        <div class="key number-key">9</div>
+                        <div class="key number-key">0</div>
+                    </div>
+                    <div class="thumb-keys">
+                        <div class="key thumb-key empty-key">-</div>
+                        <div class="key thumb-key nav-key">ESC</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hand-section">
+                <div class="hand-label">Right Hand</div>
+                <div class="keyboard-grid">
+                    <div class="key-row">
+                        <div class="key nav-key">HOME</div>
+                        <div class="key nav-key">PG_DN</div>
+                        <div class="key nav-key">PG_UP</div>
+                        <div class="key nav-key">END</div>
+                        <div class="key symbol-key">:</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key nav-key">←</div>
+                        <div class="key nav-key">↓</div>
+                        <div class="key nav-key">↑</div>
+                        <div class="key nav-key">→</div>
+                        <div class="key symbol-key">;</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                    </div>
+                    <div class="thumb-keys">
+                        <div class="key thumb-key empty-key">-</div>
+                        <div class="key thumb-key held-key">HELD</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Layer 2 -->
+    <div class="layer-section">
+        <h2>Layer 2 - Symbols (Hold Tab)</h2>
+        <div class="activation-note">Activation: Hold down the left thumb Tab key</div>
+        
+        <div class="keyboard-container">
+            <div class="hand-section">
+                <div class="hand-label">Left Hand</div>
+                <div class="keyboard-grid">
+                    <div class="key-row">
+                        <div class="key empty-key">-</div>
+                        <div class="key symbol-key">[</div>
+                        <div class="key symbol-key">{</div>
+                        <div class="key symbol-key">}</div>
+                        <div class="key empty-key">-</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key symbol-key">!</div>
+                        <div class="key symbol-key">@</div>
+                        <div class="key symbol-key">#</div>
+                        <div class="key symbol-key">$</div>
+                        <div class="key symbol-key">%</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                    </div>
+                    <div class="thumb-keys">
+                        <div class="key thumb-key held-key">HELD</div>
+                        <div class="key thumb-key empty-key">-</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hand-section">
+                <div class="hand-label">Right Hand</div>
+                <div class="keyboard-grid">
+                    <div class="key-row">
+                        <div class="key symbol-key">^</div>
+                        <div class="key symbol-key">(</div>
+                        <div class="key symbol-key">)</div>
+                        <div class="key symbol-key">]</div>
+                        <div class="key symbol-key">~</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key symbol-key">*</div>
+                        <div class="key symbol-key">-</div>
+                        <div class="key symbol-key">=</div>
+                        <div class="key symbol-key">\</div>
+                        <div class="key symbol-key">`</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key symbol-key">&</div>
+                        <div class="key symbol-key">_</div>
+                        <div class="key symbol-key">+</div>
+                        <div class="key symbol-key">|</div>
+                        <div class="key empty-key">-</div>
+                    </div>
+                    <div class="thumb-keys">
+                        <div class="key thumb-key empty-key">-</div>
+                        <div class="key thumb-key empty-key">-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Layer 3 -->
+    <div class="layer-section">
+        <h2>Layer 3 - System (Hold BOTH Tab AND Backspace)</h2>
+        <div class="activation-note">Activation: Hold down BOTH thumb keys (Tab + Backspace)</div>
+        
+        <div class="keyboard-container">
+            <div class="hand-section">
+                <div class="hand-label">Left Hand</div>
+                <div class="keyboard-grid">
+                    <div class="key-row">
+                        <div class="key system-key">RESET</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key system-key">BT 0</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key system-key">BOOT</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key system-key">BT 1</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key system-key">BT_CLR</div>
+                        <div class="key system-key">BT 2</div>
+                    </div>
+                    <div class="thumb-keys">
+                        <div class="key thumb-key held-key">HELD</div>
+                        <div class="key thumb-key held-key">HELD</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hand-section">
+                <div class="hand-label">Right Hand</div>
+                <div class="keyboard-grid">
+                    <div class="key-row">
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key system-key">RESET</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key system-key">BOOT</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                        <div class="key empty-key">-</div>
+                    </div>
+                    <div class="thumb-keys">
+                        <div class="key thumb-key held-key">HELD</div>
+                        <div class="key thumb-key held-key">HELD</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Legend -->
+    <div class="layer-section">
+        <h2>Color Legend</h2>
+        <div class="legend">
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #f8f8f8;"></span>
+                Regular keys
+            </div>
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #fff3cd;"></span>
+                Numbers
+            </div>
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #d1ecf1;"></span>
+                Navigation
+            </div>
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #d4edda;"></span>
+                Symbols
+            </div>
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #f8d7da;"></span>
+                System controls
+            </div>
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #4a90e2;"></span>
+                Held keys
+            </div>
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #f0f0f0;"></span>
+                Empty (no function)
+            </div>
+        </div>
+    </div>
+    
+    <!-- Quick Reference -->
+    <div class="layer-section">
+        <h2>Quick Reference</h2>
+        <h3>Home Row Modifiers (Hold to activate)</h3>
+        <p><strong>Left hand:</strong> A=Shift, S=Alt, D=Ctrl, F=Win/Cmd</p>
+        <p><strong>Right hand:</strong> J=Win/Cmd, K=Ctrl, L=Alt, '=Shift</p>
+        
+        <h3>Layer Access</h3>
+        <ul>
+            <li><strong>Layer 1:</strong> Hold Backspace → Numbers (left) + Navigation (right)</li>
+            <li><strong>Layer 2:</strong> Hold Tab → Symbols on both hands</li>
+            <li><strong>Layer 3:</strong> Hold Tab + Backspace → Bluetooth & System controls</li>
+        </ul>
+        
+        <h3>Tips</h3>
+        <ul>
+            <li>Tap = letter, Hold = modifier (220ms hold time)</li>
+            <li>Empty keys in layers do nothing (original key still works)</li>
+            <li>CAPS in Layer 1 activates caps word (one word in ALL CAPS)</li>
+            <li>System reset requires both hands for safety</li>
+        </ul>
+    </div>
+</body>
+</html>
