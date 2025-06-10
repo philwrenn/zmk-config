@@ -3,35 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>34-Key Keyboard Layers</title>
+    <title>My Sweep Quick Reference</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.4;
             color: #333;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 15px;
             background-color: #f5f5f5;
         }
         
-        h1, h2 {
+        h1 {
             color: #2c3e50;
+            font-size: 1.8em;
+            margin: 10px 0 15px 0;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 1.3em;
+            margin: 10px 0;
+        }
+        
+        h3 {
+            font-size: 1.1em;
+            margin: 8px 0;
         }
         
         .layer-section {
             background: white;
             border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 30px;
+            padding: 15px;
+            margin-bottom: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .keyboard-container {
             display: flex;
             justify-content: center;
-            gap: 40px;
-            margin: 20px 0;
+            gap: 30px;
+            margin: 15px 0;
         }
         
         .hand-section {
@@ -40,8 +53,9 @@
         
         .hand-label {
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             color: #555;
+            font-size: 0.9em;
         }
         
         .keyboard-grid {
@@ -56,21 +70,21 @@
         }
         
         .key {
-            width: 60px;
-            height: 50px;
+            width: 55px;
+            height: 45px;
             border: 2px solid #ccc;
-            border-radius: 6px;
+            border-radius: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: #f8f8f8;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             transition: all 0.2s;
             cursor: default;
             position: relative;
             flex-direction: column;
-            padding: 8px 4px;
+            padding: 6px 3px;
             box-sizing: border-box;
         }
         
@@ -80,15 +94,15 @@
         }
         
         .home-row-mod .key-main {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             color: #333;
             line-height: 1;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
         
         .home-row-mod .key-hold {
-            font-size: 9px;
+            font-size: 8px;
             color: #856404;
             line-height: 1;
             font-weight: 500;
@@ -102,12 +116,12 @@
         .thumb-keys {
             display: flex;
             gap: 4px;
-            margin-top: 10px;
+            margin-top: 6px;
             justify-content: center;
         }
         
         .thumb-key {
-            width: 80px;
+            width: 70px;
             background-color: #e8f4fd;
             border-color: #4a90e2;
         }
@@ -150,44 +164,59 @@
         
         .activation-note {
             background-color: #e8f4fd;
-            padding: 10px 15px;
-            border-radius: 6px;
-            margin-bottom: 20px;
+            padding: 6px 12px;
+            border-radius: 5px;
+            margin-bottom: 12px;
             text-align: center;
             font-weight: 500;
+            font-size: 0.9em;
         }
         
         .legend {
-            margin-top: 20px;
-            padding: 15px;
+            margin-top: 10px;
+            padding: 10px;
             background-color: #f8f9fa;
-            border-radius: 6px;
+            border-radius: 5px;
         }
         
         .legend-item {
             display: inline-block;
-            margin-right: 20px;
-            margin-bottom: 10px;
+            margin-right: 15px;
+            margin-bottom: 5px;
+            font-size: 0.85em;
         }
         
         .legend-color {
             display: inline-block;
-            width: 20px;
-            height: 20px;
-            border-radius: 4px;
+            width: 16px;
+            height: 16px;
+            border-radius: 3px;
             vertical-align: middle;
-            margin-right: 8px;
+            margin-right: 5px;
             border: 1px solid #ccc;
+        }
+        
+        p {
+            margin: 5px 0;
+        }
+        
+        ul {
+            margin: 8px 0;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin: 3px 0;
         }
     </style>
 </head>
 <body>
-    <h1>34-Key Keyboard Layer Guide</h1>
+    <h1>My Sweep Quick Reference</h1>
     
     <!-- Default Layer -->
     <div class="layer-section">
         <h2>Default Layer (No keys held)</h2>
-        <p>This is your normal typing layer. Home row keys have dual functions - tap for letter, hold for modifier:</p>
+        <p style="margin-bottom: 10px;">This is your normal typing layer. Home row keys have dual functions - tap for letter, hold for modifier:</p>
         
         <div class="keyboard-container">
             <div class="hand-section">
@@ -529,7 +558,11 @@
         <h3>Home Row Modifiers (Hold to activate)</h3>
         <p><strong>Left hand:</strong> A=Shift, S=Alt, D=Ctrl, F=Win/Cmd</p>
         <p><strong>Right hand:</strong> J=Win/Cmd, K=Ctrl, L=Alt, '=Shift</p>
-        
+        <h3>Firmware Update</h3>
+        <ol>
+            <li><strong>Bootloader mode:</strong> Double press reset button</li>
+            <li><strong>Flash firmware:</strong> Copy/ </li>
+        </ol>
         <h3>Layer Access</h3>
         <ul>
             <li><strong>Layer 1:</strong> Hold Backspace → Numbers (left) + Navigation (right)</li>

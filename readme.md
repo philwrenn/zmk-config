@@ -1,4 +1,4 @@
-# 34-Key Keyboard Layer Guide
+# My Sweep
 
 ## Default Layer (No keys held)
 This is your normal typing layer:
@@ -76,6 +76,10 @@ This is your normal typing layer:
 ### Home Row Modifiers (Hold to activate)
 **Left hand:** A=Shift, S=Alt, D=Ctrl, F=Win/Cmd  
 **Right hand:** J=Win/Cmd, K=Ctrl, L=Alt, '=Shift
+
+### Firmware Update
+- **Bootloader mode:** Double press reset button.
+- **Flash firmware:** Copy paste firmware on USB Mass Storage Device
 
 ### Layer Access
 - **Layer 1:** Hold Backspace → Numbers (left) + Navigation (right)
