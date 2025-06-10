@@ -23,7 +23,16 @@
 
         tri_layer {
             if-layers = <1 2>;
-            then-layer = <3>;
+            then-layer = <5>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        right_alt {
+            bindings = <&mo 3>;
+            key-positions = <32 33>;
         };
     };
 
@@ -54,6 +63,15 @@
 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
 &trans    &trans    &trans    &trans    &trans       &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &trans
                               &trans    &trans       &trans     &trans
+            >;
+        };
+
+        right_alt_layer {
+            bindings = <
+&trans  &kp F7  &kp F8  &kp F9  &kp F10    &trans  &trans  &trans  &trans  &trans
+&trans  &kp F4  &kp F5  &kp F6  &kp F11    &trans  &trans  &trans  &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F12    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans     &trans  &trans
             >;
         };
 
