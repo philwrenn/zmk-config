@@ -41,7 +41,7 @@
 
         right_layer {
             bindings = <
-&kp INS  &kp N1  &kp N2  &kp N3  &trans        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+&kp INS  &kp N7  &kp N8  &kp N3  &trans        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
 &trans   &kp N4  &kp N5  &kp N6  &trans        &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp SEMI
 &kp N0   &kp N1  &kp N2  &kp N3  &kp DELETE    &trans    &trans     &trans     &trans     &trans
                          &trans  &kp ESC       &trans    &trans
@@ -50,7 +50,7 @@
 
         left_layer {
             bindings = <
-&trans    &kp LBKT  &kp LBRC  &kp RBRC  &trans       &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
+&trans    &kp LBKT  &kp LBRC  &kp LPAR  &kp CARET    &kp TILDE  &kp RPAR   &kp RBRC   &kp RBKT  &trans
 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
 &trans    &trans    &trans    &trans    &trans       &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &trans
                               &trans    &trans       &trans     &trans
